@@ -89,7 +89,12 @@ def create_app(custom_settings: Settings | None = None, service: object | None =
 
     application.add_middleware(
         CORSMiddleware,
-        allow_origins=[cfg.rp_origin, "http://localhost:5173", "http://app.localhost:5173", "https://trytrust.lat"],
+        allow_origins=[
+            cfg.rp_origin,
+            "http://localhost:5173",
+            "http://app.localhost:5173",
+            "https://trytrust.lat",
+        ],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],

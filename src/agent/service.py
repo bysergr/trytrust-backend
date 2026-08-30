@@ -340,9 +340,7 @@ def _claims_summary(claims: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def purchases(
-    conn, *, mandate_jti: str | None = None, limit: int = 50
-) -> list[dict[str, Any]]:
+def purchases(conn, *, mandate_jti: str | None = None, limit: int = 50) -> list[dict[str, Any]]:
     """Transactions, newest first.
 
     `mandate_jti` filters to the mandate NAMED on the intent. A purchase debits
